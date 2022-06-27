@@ -1,6 +1,7 @@
 package com.rickandmortychallenge.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -13,10 +14,11 @@ import com.rickandmortychallenge.entity.LocationModel;
 @Service
 public class LocactionServiceImpl implements ILocationService{
 	
-	private static final String API_URL_LOCATION = "https://rickandmortyapi.com/api/location/";
+	@Value("${API_URL_LOCATION}")
+	private String API_URL_LOCATION;
 	
 	@Autowired
-	RestTemplate restTemplate;
+	private RestTemplate restTemplate;
 	
 	@Override
 	public ResponseEntity<?> findByLocation(int id) {
