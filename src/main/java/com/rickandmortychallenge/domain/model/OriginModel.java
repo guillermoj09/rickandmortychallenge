@@ -1,28 +1,18 @@
-package com.rickandmortychallenge.entity;
+package com.rickandmortychallenge.domain.model;
 
 import java.util.List;
 
-
-public class LocationModel {
-
-	private Long id;
+public class OriginModel {
 	private String name;
 	private String url;
 	private String dimension;
 	private List<String> residents;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	public String getUrl() {
 		return url;
 	}
@@ -41,7 +31,6 @@ public class LocationModel {
 	public void setResidents(List<String> residents) {
 		this.residents = residents;
 	}
-	
 	
 	
 }

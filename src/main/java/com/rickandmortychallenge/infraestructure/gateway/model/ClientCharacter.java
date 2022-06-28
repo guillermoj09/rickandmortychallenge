@@ -1,8 +1,8 @@
-package com.rickandmortychallenge.entity;
+package com.rickandmortychallenge.infraestructure.gateway.model;
 
 import java.util.List;
 
-public class CharacterModel  {
+public class ClientCharacter {
 	
 	private Long id;
 	private String name;
@@ -11,7 +11,22 @@ public class CharacterModel  {
 	private String type;
 	private List<String> episode;
 	private int episode_count;
+	private ClientCharacterLocation origin;
+	private ClientCharacterLocation location;
 	
+
+	public ClientCharacterLocation getOrigin() {
+		return origin;
+	}
+	public void setOrigin(ClientCharacterLocation origin) {
+		this.origin = origin;
+	}
+	public ClientCharacterLocation getLocation() {
+		return location;
+	}
+	public void setLocation(ClientCharacterLocation location) {
+		this.location = location;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -60,7 +75,5 @@ public class CharacterModel  {
 	public void setEpisode(List<String> episode) {
 		this.episode = episode;
 	}
-	
 
-	
 }
